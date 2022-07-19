@@ -1,6 +1,6 @@
 <img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="UltraJoins" src="https://cdn.discordapp.com/avatars/993439727409692693/756b13317a19532f9c3ceb8772c229e3.png?width=115&height=115">  
 
-# UltraJoins V3 + Dashboard (Soon)
+# UltraJoins V3
 
 [![](https://img.shields.io/discord/982712971782406244.svg?logo=discord&colorB=7289DA)](https://discord.gg/S92bvtRwSE)
 [![](https://img.shields.io/badge/discord.js-v13.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
