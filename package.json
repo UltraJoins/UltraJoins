@@ -4,7 +4,7 @@
   "description": "UltraJoins v3 by Ceed",
   "main": "index.js",
   "author": "Ceed",
-  "license": "ISC",
+  "license": "GPL 3.0",
   "dependencies": {
     "array-sort": "^1.0.0",
     "ascii-art": "^2.5.0",
@@ -25,7 +25,7 @@
     "parse-ms": "^2.1.0",
     "pm2": "^5.2.0",
     "prism-media": "0.0.3",
-    "quick.db": "^7.0.0-b21",
+    "quick.db": "7.0.0-b21",
     "safe-buffer": "^5.1.2",
     "simple-youtube-api": "^5.2.1",
     "snekfetch": "^4.0.4",
