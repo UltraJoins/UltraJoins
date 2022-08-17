@@ -4,7 +4,7 @@
   "description": "UltraJoins v3 by Ceed",
   "main": "index.js",
   "author": "Ceed",
-  "license": "ISC",
+  "license": "GPL 3.0",
   "dependencies": {
     "array-sort": "^1.0.0",
     "ascii-art": "^2.5.0",
