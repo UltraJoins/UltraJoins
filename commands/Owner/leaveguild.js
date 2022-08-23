@@ -1,4 +1,4 @@
-const Discord = require('discord.js')
+/*const Discord = require('discord.js')
 const config = require('../../config.json')
 module.exports = {
   name: "leaveguild",
@@ -23,4 +23,4 @@ module.exports = {
       .setColor("#2f3136");
     message.channel.send(embed);
   } 
-};
+};*/

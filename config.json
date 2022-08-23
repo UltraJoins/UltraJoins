@@ -1,8 +1,7 @@
 {
-    "token1": "",
+    "token": "",
     "idwebhook": "",
-    "statusbot1": "+help - +farm ☕",
-    "statusbot2": "☕ .gg/ultrajoins",
+    "status": "+help - +farm ☕",
     "tokenwebhook": "",
     "EmbedFooter": "",
     "ImageEmbed": "",
@@ -22,10 +21,10 @@
     "pay": "",
     "default_prefix": "+",
     
-
       "clientID": "",
       "OwnerID": ["", ""],
       "ownerID": [
         ""
     ],
       "color": "#2f3136"
+  }

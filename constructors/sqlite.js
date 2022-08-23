@@ -6,7 +6,6 @@ const get = async (message, user) => {
     coins: 0,
     logs: [],
     banned: false, 
-    ticket: 0,
     freecoins: 0
   } 
   let object_guild_based = {
@@ -15,7 +14,6 @@ const get = async (message, user) => {
     uses: 0,
     record: [],
     serverLevel: 1,
-    description: "",
     users: [],
   } 
   
