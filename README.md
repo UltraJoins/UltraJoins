@@ -3,10 +3,10 @@
 # UltraJoins V3
 
 [![](https://img.shields.io/discord/982712971782406244.svg?logo=discord&colorB=7289DA)](https://discord.gg/S92bvtRwSE)
-[![](https://img.shields.io/badge/discord.js-v13.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
+[![](https://img.shields.io/badge/discord.js-v12.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
 [![](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/niondiscord)
 
-This bot is used by over 12k Discord users and over 99 servers.
+This bot is used by over 132k Discord users and over 99 servers.
 
 * Creation date: Created on January 01, 2022
 * Github upload date: July 11, 2022
@@ -23,7 +23,7 @@ UltraJoins has a lot of features to gain members:
 
 ## Links
 
-*   [Discord](https://discord.gg/S92bvtRwSE)
+*   [Discord](https://discord.gg/ultrajoins)
 *   [Github](https://github.com/UltraJoins/UltraJoins)
 
 ## License
