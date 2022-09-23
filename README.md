@@ -6,10 +6,10 @@
 [![](https://img.shields.io/badge/discord.js-v12.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
 [![](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/niondiscord)
 
-This bot is used by over 132k Discord users and over 99 servers.
+This bot is used by over 49k Discord users and over 34 servers.
 
-* Creation date: Created on January 01, 2022
-* Github upload date: July 11, 2022
+* Creation date: Created on March 01, 2022
+* Github upload date: September 23, 2022
 
 UltraJoins is a join4join Discord bot coded in JavaScript with [Discord.js v12](https://discord.js.org) by [Ceed#2282](https://github.com/ceedledev).  
 Feel free to add a star ⭐ to the repository to promote the project!
