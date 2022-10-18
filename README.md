@@ -2,7 +2,7 @@
 
 # UltraJoins V3
 
-[![](https://img.shields.io/discord/1018077210751545375.svg?logo=discord&colorB=7289DA)](https://discord.gg/HpktxEGXJr)
+[![](https://img.shields.io/discord/1023159173611016232.svg?logo=discord&colorB=7289DA)](https://discord.gg/HpktxEGXJr)
 [![](https://img.shields.io/badge/discord.js-v12.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
 [![](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/niondiscord)
 
