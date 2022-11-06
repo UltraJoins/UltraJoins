@@ -13,7 +13,7 @@ module.exports = {
 
  
     
-    message.channel.send("Good news, we have released a new version of UltraJoins, with lots of new features!\nMore information at https://discord.gg/8D2Bb9PZYX")
+    message.channel.send("Good news, we have released a new version of UltraJoins, with lots of new features!\nMore information at https://discord.gg/freemembersplus")
     
     const embed = new Discord.MessageEmbed()
     .setAuthor(client.user.username, client.user.displayAvatarURL())
