@@ -58,7 +58,7 @@ module.exports = {
     .setColor(`#2f3136`)
     .setDescription(`${emoji.info} <@${member.user.id}> Has left server. And now has \`${data.coins.toFixed(1)}\` coin(s).`)
     .setTimestamp()
-    .setImage(`${config.ImageEmbed}`)
+    .setImage("https://images-ext-2.discordapp.net/external/09m3TSBnu6mhLIUTb3zghpGk6Y1EWrR_Vx6dztb6E1Y/https/images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif?width=421&height=54")
     if (channel) channel.send(embed) 
   }
 } 

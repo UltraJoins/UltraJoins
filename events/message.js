@@ -53,8 +53,8 @@ module.exports = {
     let data = await get(message, message.author) 
     
     let embed1 = new Discord.MessageEmbed()
-    .setDescription(`You cannot execute any commands, because you have been blacklist from the system.\nContact \`Ceed#0001\` or \`Txslx#2065\` to be whitelist!`)
-     .setImage(`${config.ImageEmbed}`)
+    .setDescription(`You cannot execute any commands, because you have been blacklist from the system.\nContact \`Ceed#2117\` to be whitelist!`)
+     .setImage("https://media.discordapp.net/attachments/978147916776603729/990925326429323274/IMG_0183.gif")
     .setColor('#2f3136')
    
     if (data.banned == true && message.author.id !== "ttt") return message.channel.send(embed1)

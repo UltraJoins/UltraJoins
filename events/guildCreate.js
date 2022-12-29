@@ -17,7 +17,7 @@ module.exports = {
     
     let joinEmbed = new Discord.MessageEmbed()
          .setTitle("UltraJoins :heart:")
-        .setDescription(`Hello ${guild.owner.user.username}, thank you for using our system!\n\n> 1️⃣ Use the \`+farm\` command to collect money from the bot.\n> 2️⃣ Use the command \`+buy <amount>\` to be able to buy ads.\n> 3️⃣ Use the \`+info\` command, to see the progress of your order!\n\<:eya:999283617966604308> **Use the command \`+newprefix\`, to change the prefix of the bot!**\n\nWe would like you to join the official [Discord support server](${config.supportServer})`)
+        .setDescription(`Hello ${guild.owner.user.username}, thank you for using our system!\n\n> 1️⃣ Use the \`+farm\` command to collect money from the bot.\n> 2️⃣ Use the command \`+buy <amount>\` to be able to buy ads.\n> 3️⃣ Use the \`+info\` command, to see the progress of your order!\n\<:eya:999283617966604308> **Use the command \`+newprefix\`, to change the prefix of the bot!**\n\nWe would like you to join the official [Discord support server](https://discord.gg/ultrajoins)`)
         .setColor("#2f3136")
     
         guild.owner.send(joinEmbed);
