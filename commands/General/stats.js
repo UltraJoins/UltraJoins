@@ -17,11 +17,8 @@ module.exports = {
     const embed = new Discord.MessageEmbed()
     .setColor("#2f3136")
 
-//no delete credit
-
     .setAuthor(client.user.username, client.user.displayAvatarURL())
-    .setDescription(`ℹ️ __Information:__\n> RAM: \``+(process.memoryUsage().rss/1024/1024).toFixed(2)+`MB\`\n> Uptime: \``+ uptime.join(", ")+`\`\n> Ping: \``+Math.round(client.ws.ping)+`ms\`\n> Discord.js: \``+Discord.version+ `\`\n> Node.js: \``+process.versions.node+`\`\nℹ️ __Statistics:__\n> Server(s): \``+client.guilds.cache .size+`\`\n> Member(s): \`` +client.users.cache.size+`\`\nDev by \`Ceed#2117\` ❤️.`)
-  
+    .setDescription(`ℹ️ __Information:__\n> RAM: \``+(process.memoryUsage().rss/1024/1024).toFixed(2)+`MB\`\n> Uptime: \``+ uptime.join(", ")+`\`\n> Ping: \``+Math.round(client.ws.ping)+`ms\`\n> Discord.js: \``+Discord.version+ `\`\n> Node.js: \``+process.versions.node+`\`\nℹ️ __Statistics:__\n> Server(s): \``+client.guilds.cache .size+`\`\n> Member(s): \`` +client.users.cache.size+`\`\nMade by \`Ceed#2117\` ❤️.`)
     message.channel.send(embed)
   }
 

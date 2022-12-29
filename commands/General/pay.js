@@ -10,8 +10,8 @@ module.exports = {
   execute: async(client, message, args, data, db) => {
   
   var server = client.guilds.cache.get(`${message.guild.id}`);
-if(server != '982712971782406244') {
-  message.channel.send('UltraJoin bot commands are **forbidden to use** in other servers, Please **join our support server** to execute UltraJoin bot commands !\n\n`Link:` https://discord.gg/j7zUQAXsrX')
+if(server != `${config.serverid}`) {
+  message.channel.send('UltraJoin bot commands are **forbidden to use** in other servers, Please **join our support server** to execute UltraJoin bot commands !\n\n`Link:` https://discord.gg/ultrajoins')
   } else {
   
   
@@ -101,7 +101,7 @@ if(server != '982712971782406244') {
     .setAuthor(client.user.username, client.user.displayAvatarURL({ format: "png", dynamic: true }))
     
     .setDescription(`Coins paid by: **${message.author.tag} (${message.author.id})**\nCoins paid to: **${user.tag} (${user.id})**\ nTotal: **${amount}** pieces !`)
-     .setImage(`${config.ImageEmbed}`)
+    .setImage("https://images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
     .setThumbnail(user.displayAvatarURL({ format: 'png', dynamic: true }))
     .setTimestamp()
     .setColor('#2f3136')

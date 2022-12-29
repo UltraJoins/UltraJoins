@@ -14,7 +14,7 @@ module.exports = {
       .setAuthor(client.user.username, client.user.displayAvatarURL())
       .setColor('#2f3136')
       .setDescription(`${emoji.error} I tried to find your server... But no purchases were made for this server.`)
-       .setImage(`${config.ImageEmbed}`)
+      .setImage("https://images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
       message.channel.send(erreur).then(msg => {msg.delete({ timeout: 12000 })}).catch(console.error);return;}   
     
     let bar = []
@@ -36,7 +36,7 @@ module.exports = {
     .setColor("#2f3136")
     .setAuthor(client.user.username, client.user.displayAvatarURL())
     .setTitle(`${message.guild.name}`)
-      .setImage(`${config.ImageEmbed}`)
+    .setImage("https://images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
     .setDescription(`Order members: **${data.orders}**\nTotal members: **${data.uses}/${data.orders}**`)
 
     message.channel.send(warn, embed) 

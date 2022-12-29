@@ -7,6 +7,9 @@ module.exports = {
   description: "",
   execute: async(client, message) => {
    
+  
+            
+            
     const embed = new Discord.MessageEmbed()
     .setAuthor(client.user.username, client.user.displayAvatarURL())
     
@@ -14,6 +17,7 @@ module.exports = {
     .setColor("#2f3136")
     message.channel.send(embed)
       
-    
-  } 
+     
+  
+}
 }

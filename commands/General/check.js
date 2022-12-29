@@ -21,7 +21,7 @@ module.exports = {
       
       .setDescription(`You will lose \`2\` coins if you leave now!`)
       .addField(`Remaining time:`, time.join(", "), false)
-       .setImage(`${config.ImageEmbed}`)
+      .setImage("https://images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
       message.channel.send(noembed)   
      } else {
       const embed = new Discord.MessageEmbed()

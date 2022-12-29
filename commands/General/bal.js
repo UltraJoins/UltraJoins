@@ -9,8 +9,8 @@ module.exports = {
   
   
 var server = client.guilds.cache.get(`${message.guild.id}`);
-if(server != '982712971782406244') {
-  message.channel.send('UltraJoin bot commands are **forbidden to use** in other servers, Please **join our support server** to execute UltraJoin bot commands !\n\n`Link:` https://discord.gg/j7zUQAXsrX')
+if(server != `&{config.serverid}`) {
+  message.channel.send('UltraJoin bot commands are **forbidden to use** in other servers, Please **join our support server** to execute UltraJoin bot commands !\n\n`Link:` https://discord.gg/ultrajoins')
   } else {
   
  
@@ -45,7 +45,7 @@ if(server != '982712971782406244') {
     .addField(`__**Your last transactions**__`, logs.length == 0? "No transaction history found!" : logs.join("\n"))
     .setColor("#2f3136")
     .setThumbnail("https://cdn.discordapp.com/attachments/633366106530381838/768753019130478612/233-2333229_money-bag-emoji-transparent-transparent-background-money-bag.png")
-       .setImage(`${config.ImageEmbed}`)
+    .setImage("https://images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
     
     
     message.channel.send(embed)

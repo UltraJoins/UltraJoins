@@ -10,8 +10,8 @@ module.exports = {
   
   
   var server = client.guilds.cache.get(`${message.guild.id}`);
-if(server != '982712971782406244') {
-  message.channel.send('UltraJoin bot commands are **forbidden to use** in other servers, Please **join our support server** to execute UltraJoin bot commands !\n\n`Link:` https://discord.gg/j7zUQAXsrX')
+if(server != `${config.serverid}`) {
+  message.channel.send('UltraJoin bot commands are **forbidden to use** in other servers, Please **join our support server** to execute UltraJoin bot commands !\n\n`Link:` https://discord.gg/ultrajoins')
   } else {
    
     let orders = await db.startsWith(`orders_`, { sort: ".data" })
@@ -24,14 +24,14 @@ if(server != '982712971782406244') {
      .setColor('#2f3136')
         .setAuthor(client.user.username, client.user.displayAvatarURL())
      .setDescription('The bot is searching for servers, Please wait `3 seconds` to farm!\n\n*Thank you for using the bot to expand your server!*')
-        .setImage(`${config.ImageEmbed}`)
+      .setImage("https://images-ext-2.discordapp.net/external/09m3TSBnu6mhLIUTb3zghpGk6Y1EWrR_Vx6dztb6E1Y/https/images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
 
     const embed = new Discord.MessageEmbed()
     .setColor("#2f3136")
     .setAuthor('UltraJoins', client.user.displayAvatarURL())
     
     .setDescription(`Join one of the servers below \`⬇️\` to earn \`1\` coin. \n\n`)
-      .setImage(`${config.ImageEmbed}`)
+    .setImage("https://images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
     for (let i = 0;i < orders.length;i++) {
      
       let handler = true

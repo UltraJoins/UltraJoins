@@ -22,7 +22,7 @@ module.exports = {
    
       
       .addField(`Giftcode:`, `${CODE}`, false)
-      .setImage(`${config.ImageEmbed}`)
+      .setImage("https://images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
           .setAuthor(client.user.username, client.user.displayAvatarURL())
       .setColor("#2f3136")
       
@@ -43,7 +43,7 @@ module.exports = {
                 const redeemed = new Discord.MessageEmbed()
                 .setColor("#2f3136")
                    .setAuthor(client.user.username, client.user.displayAvatarURL())
-                .setImage(`${config.ImageEmbed}`)
+                .setImage("https://images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
                 .setDescription(`${emoji.premium} You just got \`${COINSTOADD}\` coins!`)
                 message.channel.send(redeemed)
           data.logs.unshift(`[+${COINSTOADD}] - Claiming a gift code.`)
@@ -55,7 +55,7 @@ module.exports = {
           let helpembed = new Discord.MessageEmbed()
           .setAuthor(client.user.username, client.user.displayAvatarURL())
           .setDescription(`\`+giftcode create <10> <MyCode>\`: If you want to offer a kdo card to a friend\n\`+giftcode redeem <MyCode>\`: To recover a kdo code`)
-           .setImage(`${config.ImageEmbed}`)
+          .setImage("https://images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
           
           
           .setColor('#2f3136')
