@@ -1,13 +1,11 @@
 {
     "token": "",
-    "idwebhook": "",
-    "status": "+help - +farm ☕",
-    "tokenwebhook": "",
-    "EmbedFooter": "",
-    "ImageEmbed": "",
+    "serverid": "",
+    "EmbedFooter": "UltraJoins",
+    
     "guildCreate": "",
-    "supportServer": "https://discord.gg/freemembersplus",
-    "addBot": "https://discord.com/oauth2/authorize?client_id=993439727409692693&permissions=8&scope=bot",
+    "supportServer": "https://discord.gg/ultrajoins",
+    "addBot": "",
     "guildDelete": "",
     "userLeft": "",
     "userJoin": "",
@@ -17,14 +15,9 @@
     "removebal": "",
     "whitelist": "",
     "freecoins": "",
-    "notif": "",
     "pay": "",
-    "default_prefix": "+",
-    
+    "bugchannel": "",
       "clientID": "",
       "OwnerID": ["", ""],
-      "ownerID": [
-        ""
-    ],
       "color": "#2f3136"
-  }
+}

@@ -14,6 +14,9 @@ const fs = require('fs');
 
 
 
+
+
+
 client.commands = new Discord.Collection();
 const files = fs.readdirSync('./commands/General').filter(file => file.endsWith(".js")); 
 
@@ -65,10 +68,10 @@ client.on("message", msg =>{
   const emmbed = new Discord.MessageEmbed()
     .setColor(`#2f3136`)
     .setAuthor(client.user.username, client.user.displayAvatarURL())
-    .setImage(`${config.ImageEmbed}`)
-    .setDescription(`My prefix is : \`${config.default_prefix}\`\nUse \`${config.default_prefix}help\` help page.`)
+    .setImage("https://images-ext-1.discordapp.net/external/xLBZF3gHJcPGaud876J8e7o54faDPkt-e44UTPPxTv4/https/share.creavite.co/m6sxxOQg6llRnrME.gif")
+    .setDescription(`My prefix is : \`${config.prefix}\`\nUse \`${config.prefix}help\` help page.`)
     
-  if(msg.content === `<@${config.clientID}>`){
+  if(msg.content === `<@>`){
     msg.channel.send(emmbed);
   }
 })
@@ -85,7 +88,7 @@ client.on("shardReady", (shardID) => {
               const fetch = require('node-fetch');
           let guildsCounts = await client.shard.fetchClientValues("guilds.cache.size");
           let guildsCountss = guildsCounts[0] + guildsCounts[1] + guildsCounts[2];
-          fetch(`https://infinitybotlist.com/api/bots/993439727409692693/`, {
+          fetch(`https://infinitybotlist.com/api/bots/`, {
               method: "POST",
               headers: {
                   Authorization: "*****",
@@ -100,23 +103,23 @@ client.on("shardReady", (shardID) => {
    poststats();
 
   }
-  const shardlog = new Discord.WebhookClient(`${config.idwebhook}`, `${config.tokenwebhook}`);
+  const shardlog = new Discord.WebhookClient('994540890116866068', 'Wg8GnNhbRJ2N3gT-JcW2MCIFsSC-keNtGpdfFdZyHOafaGY5zKBGEVK6vcqRLjamSE1U');
   const postMessage = `${emoji.online} | Shard #${shardID} is ready!`;
   shardlog.send(postMessage);
 });
 client.on("shardDisconnect", (shardID) => {
-  const shardlog = new Discord.WebhookClient(`${config.idwebhook}`, `${config.tokenwebhook}`);
+  const shardlog = new Discord.WebhookClient('994540890116866068', 'Wg8GnNhbRJ2N3gT-JcW2MCIFsSC-keNtGpdfFdZyHOafaGY5zKBGEVK6vcqRLjamSE1U');
   const postMessage = `${emoji.load} | Shard #${shardID} is disconnected...`;
   shardlog.send(postMessage);
   
 });
 client.on("shardReconnecting", (shardID) => {
-  const shardlog = new Discord.WebhookClient(`${config.idwebhook}`, `${config.tokenwebhook}`);
+  const shardlog = new Discord.WebhookClient('994540890116866068', 'Wg8GnNhbRJ2N3gT-JcW2MCIFsSC-keNtGpdfFdZyHOafaGY5zKBGEVK6vcqRLjamSE1U');
   const postMessage = `${emoji.inactif} | Shard #${shardID} is reconnecting...`;
   shardlog.send(postMessage);
 });
 client.on("shardResume", (shardID) => {
-  const shardlog = new Discord.WebhookClient(`${config.idwebhook}`, `${config.tokenwebhook}`);
+  const shardlog = new Discord.WebhookClient('994540890116866068', 'Wg8GnNhbRJ2N3gT-JcW2MCIFsSC-keNtGpdfFdZyHOafaGY5zKBGEVK6vcqRLjamSE1U');
   const postMessage = `${emoji.online} | Shard #${shardID} has resumed!`;
   shardlog.send(postMessage);
 });
