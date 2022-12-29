@@ -5,8 +5,7 @@ const get = async (message, user) => {
   let object_user_based = {
     coins: 0,
     logs: [],
-    banned: false, 
-    freecoins: 0
+    banned: false
   } 
   let object_guild_based = {
     code: 0,
@@ -18,8 +17,7 @@ const get = async (message, user) => {
   } 
   
   let object_guild_user_based = {
-    joinedDate: 0,
-    activity: 0 
+    joinedDate: 0
   } 
   
   Object.entries(object_user_based).map(async x => {
