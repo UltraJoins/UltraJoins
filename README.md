@@ -1,7 +1,7 @@
 <img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="UltraJoins" src="https://cdn.discordapp.com/avatars/993439727409692693/756b13317a19532f9c3ceb8772c229e3.png?width=115&height=115">  
 
 # UltraJoins V3
-> **NEW V4 UPDATE: https://discord.gg/h6bjSVnv2f**
+> ⭐️ **NEW V4 UPDATE: https://discord.gg/h6bjSVnv2f** 😍
 
 [![](https://img.shields.io/discord/1044305778288381985.svg?logo=discord&colorB=7289DA)](https://discord.gg/h6bjSVnv2f)
 [![](https://img.shields.io/badge/discord.js-v12.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
