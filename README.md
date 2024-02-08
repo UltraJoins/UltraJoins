@@ -3,7 +3,7 @@
 # UltraJoins V3
 > ⭐️ **NEW V4 UPDATE: https://discord.gg/h6bjSVnv2f** 😍
 
-[![](https://img.shields.io/discord/1044305778288381985.svg?logo=discord&colorB=7289DA)](https://discord.gg/h6bjSVnv2f)
+[![](https://img.shields.io/discord/1044305778288381985.svg?logo=discord&colorB=7289DA)](https://discord.gg/ultrajoins)
 [![](https://img.shields.io/badge/discord.js-v12.0.0--dev-blue.svg?logo=npm)](https://github.com/discordjs)
 [![](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/niondiscord)
 
@@ -24,7 +24,7 @@ UltraJoins has a lot of features to gain members:
 
 ## Links
 
-*   [Discord](https://discord.gg/h6bjSVnv2f)
+*   [Discord](https://discord.gg/ultrajoins)
 *   [Github](https://github.com/UltraJoins/UltraJoins)
 
 ## License
