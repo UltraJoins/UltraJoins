@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.39",
+    "canvas": "2.11.0",
+    "discord.js": "^14.6.0",
+    "mongoose": "^6.12.1",
+    "undici": "5.21.0",
+    "express": "4.18.2",
+    "passport": "0.7.0",
+    "passport-discord": "0.1.4",
+    "express-session": "1.18.0",
+    "axios": "1.6.7",
+    "node-cron": "3.0.3"
+  }
+}
