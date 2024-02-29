@@ -1,0 +1,53 @@
+const { ActionRowBuilder, ButtonBuilder, EmbedBuilder, AttachmentBuilder, UserBuilder } = require("discord.js");
+const config = require("../config");
+const User = require("../models/User");
+const { genUserCard } = require("../lib/utils");
+
+module.exports = {
+  data: {
+    name: "profile",
+    description: "See your profile.",
+    options: [
+      {
+        type: 6,
+        name: "user",
+        required: false,
+        description: "The user?",
+      },
+    ],
+  },
+
+  async exe(client, interaction) {
+    let userId;
+
+    const userOption = interaction.options.getUser("user");
+
+    if (userOption) {
+      userId = userOption.id;
+    } else {
+      userId = interaction.user.id;
+    }
+
+    try {
+      const user = await User.findOne({ userId });
+
+      if (user) {
+        console.log("[PROFILE] Profile found:", user);
+
+        const imageBuffer = await genUserCard(client.users.cache.get(userId), user);
+
+        console.log("[PROFILE] Image generated successfully!");
+
+        const attachment = new AttachmentBuilder(imageBuffer, "profile.png");
+
+        await interaction.reply({ content: `__**TIPS:**__ We want to provide you with an efficient system, so we adapt to the community 😉`, files: [attachment] });
+      } else {
+        console.log("[PROFILE] User not found in the database.");
+        await interaction.reply("User not found in the database.");
+      }
+    } catch (error) {
+      console.error("Error when retrieving the profile:", error);
+      await interaction.reply(`An error occurred while processing your request.`);
+    }
+  },
+};

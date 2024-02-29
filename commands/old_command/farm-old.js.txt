@@ -1,0 +1,65 @@
+const { EmbedBuilder, CommandInteraction } = require("discord.js");
+const config = require("../config");
+const Guild = require("../models/Guild");
+
+module.exports = {
+  data: {
+    name: "farm",
+    description: "Join server earn coin.",
+  },
+
+  /**
+   * @param {Client} client
+   * @param {CommandInteraction} interaction
+   */
+  async exe(client, interaction) {
+    try {
+      const userId = interaction.user.id;
+      const guildsDB = await Guild.find({});
+
+      const filteredGuilds = guildsDB.filter(({ guildId, invite }) => invite && !client.guilds.cache.get(guildId).members.cache.has(userId));
+      const sortedGuilds = filteredGuilds.sort((a, b) => (b.uses / b.orders) - (a.uses / a.orders));
+      const serverList = sortedGuilds.slice(0, 5).map(({ guildId, invite, uses, orders }) => {
+        const guild = client.guilds.cache.get(guildId);
+        const guildName = guild ? guild.name : "Unknown Server";
+        const inviteLink = invite ? `https://discord.gg/${invite}` : "No Invite";
+        const joinPercentage = Math.floor((uses / orders) * 100);
+
+        return {
+          name: guildName,
+          value: `> ${config.emojis.email} [Join](https://discord.gg/${invite}) \`(${joinPercentage}% [${uses}/${orders}])\``,
+        };
+      });
+
+      if (serverList.length === 0) {
+      const embed = new EmbedBuilder()
+        .setTitle(`${config.emojis.tractor} Farm`)
+        .setDescription(`Join one of the servers below ⬇️ to earn **0.75 coins**.\n\n> No available servers for farming.`)
+        .addFields({ name: '\u200B', value: `${config.emojis.gift} Don't see any other servers? Join our [**support server**](${config.supportGuild}) to get more coins!`, inline: true })
+        .setImage(config.imageBot)
+        .setColor(config.color.default);
+        
+        return await interaction.reply({
+        content: `${config.emojis.warning} Remember, you must stay **2 days** on the joined servers, otherwise you will lose **2 coins**! ${config.emojis.warning}`,
+        embeds: [embed]
+        });
+      }
+
+      const embed = new EmbedBuilder()
+        .setTitle(`${config.emojis.tractor} Farm`)
+        .setDescription(`Join one of the servers below ⬇️ to earn **0.75 coins**.`)
+        .addFields(...serverList)
+        .addFields({ name: '\u200B', value: `${config.emojis.gift} Don't see any other servers? Join our [**support server**](${config.supportGuild}) to get more coins!`, inline: true })
+        .setImage(config.imageBot)
+        .setColor(config.color.default);
+
+      await interaction.reply({
+        content: `${config.emojis.warning} Remember, you must stay **2 days** on the joined servers, otherwise you will lose **2 coins**! ${config.emojis.warning}`,
+        embeds: [embed]
+      });
+    } catch (error) {
+      console.error("Error when processing the /farm command:", error);
+      await interaction.reply(`An error occurred while processing your request.`);
+    }
+  },
+};

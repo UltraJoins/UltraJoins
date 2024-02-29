@@ -1,0 +1,60 @@
+const { ActionRowBuilder, ButtonBuilder, EmbedBuilder, AttachmentBuilder } = require("discord.js");
+const config = require("../config");
+const Guild = require("../models/Guild");
+const { createCanvas, loadImage, registerFont } = require("canvas");
+
+module.exports = {
+  data: {
+    name: "info",
+    description: "See info command.",
+  },
+
+  async exe(client, interaction) {
+    try {
+      const guildId = interaction.guild.id;
+
+      const guildData = await Guild.findOne({ guildId });
+
+      if (!guildData) {
+      const embed = new EmbedBuilder()
+      .setDescription("This server is not registered.")
+      .setImage(config.imageBot)
+      .setColor(config.color.red);
+        await interaction.reply({ embeds: [embed] });
+        return;
+      }
+
+      const lastTwoRecords = guildData.records.slice(-2);
+
+      const userTags = await Promise.all(lastTwoRecords.map(async (userId) => {
+        try {
+          const user = await client.users.fetch(userId);
+          return user.tag;
+        } catch (error) {
+          return "Unknown User";
+        }
+      }));
+
+      const backgroundImage = await loadImage("https://media.discordapp.net/attachments/1044708545540665445/1202014577462870197/IMG_0524.png?ex=65cbea4f&is=65b9754f&hm=42d99707e83c54a9926c6f3c03ec82419d3d428fd43a690a426dd953b592efe7&");
+      const canvas = createCanvas(backgroundImage.width, backgroundImage.height);
+      const ctx = canvas.getContext("2d");
+
+      ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#FFF";
+      ctx.font = "20px Arial";
+      
+      userTags.forEach((tag, index) => {
+        const yPos = 190 + (index + 1) * 40;
+        ctx.fillText(tag, 580, yPos);
+      });
+
+      const attachment = new AttachmentBuilder(canvas.toBuffer(), "info.png");
+
+      await interaction.reply({ files: [attachment] });
+    } catch (error) {
+      console.error("Error when retrieving the info:", error);
+      await interaction.reply(`An error occurred while processing your request.`);
+    }
+  },
+};
