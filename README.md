@@ -13,6 +13,10 @@ This bot is used by over 600k Discord users and over 89 servers.
 UltraJoins is a join4join Discord bot coded in JavaScript with [Discord.js v14](https://discord.js.org) by [Ceed#2117](https://github.com/ceedledev).  
 Feel free to add a star ⭐ to the repository to promote the project!
 
+## Help
+
+Do you need help with the source? Add me on Discord (Ceed#2117).
+
 ## Links
 
 *   [Discord](https://discord.gg/ultrajoins)
