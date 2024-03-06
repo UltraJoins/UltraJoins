@@ -15,7 +15,7 @@ Feel free to add a star ⭐ to the repository to promote the project!
 
 ## Help
 
-Do you need help with the source? Add me on Discord (Ceed#2117).
+Do you need help with the source? Add me on Discord (ceed2117).
 
 ## Links
 
